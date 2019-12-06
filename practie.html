@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+
+        let arr = [3,[5,6,[7,7]]]
+        var count = 0
+        const deepArray = (arr) => {
+            arr.forEach(element => {
+                if (Array.isArray(element)) {
+                    deepArray(element)
+                } else {
+                    count = count + 1;
+                }
+            })
+            return count
+        }
+        console.log(deepArray(arr))
+
+
+
+    </script>
+
+</body>
+
+</html>

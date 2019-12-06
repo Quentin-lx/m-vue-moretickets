@@ -1,0 +1,78 @@
+<template>
+  <div class="common-wrap">
+      <main>
+          <router-view></router-view>
+      </main>
+      <nav>
+          <ul>
+              <li class="icon index">精选</li>
+              <li class="icon list">演出</li>
+              <li class="icon mine">我的</li>
+          </ul>
+      </nav>
+  </div>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style lang='stylus' scoped>
+.common-wrap{
+    display flex
+    flex-direction column
+    height 100%
+    width 100%
+    main{
+        flex 1
+        background #fff
+    }
+    nav{
+        ul{
+            width 100%
+            height 100%
+            background #fff
+            display flex
+            padding-top .07rem
+            .icon{
+                flex: 1;
+                height .43rem
+                color: #333;
+                text-align: center;
+                line-height: .22rem;
+                background: no-repeat;
+                background-position: center .07rem;
+                background-size: .22rem .22rem;
+                padding-top: .07rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                font-size .1rem
+            }
+            .index[data-v-25db19f6]{
+                background-image: url(https://m.moretickets.com/_nuxt/img/d919980.png);
+            }
+            &.active-index{
+                background-image url(https://m.moretickets.com/_nuxt/img/35f2215.png)
+            }
+            .list{
+                background-image url(https://m.moretickets.com/images/bottom-tab/list-ddc66f48b7.png)
+            }
+            &.active-list{
+                background-image url(https://m.moretickets.com/images/bottom-tab/list-active-d90ccc2e14.png)
+            }
+            .mine{
+                background-image url(https://m.moretickets.com/images/bottom-tab/mine-9d7cd31309.png)
+            }
+            &.active-mine{
+                background-image url(https://m.moretickets.com/images/bottom-tab/list-active-d90ccc2e14.png)
+            }
+        }
+    }
+}
+
+
+
+</style>
